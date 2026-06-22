@@ -11,7 +11,7 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchTrains = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/search/trains');
+        const res = await axios.get('https://suryabusandrailwaybooking.onrender.com/api/search/trains');
         setTrains(res.data);
       } catch (err) {
         console.error(err);

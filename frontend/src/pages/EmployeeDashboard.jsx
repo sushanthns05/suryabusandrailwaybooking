@@ -8,7 +8,7 @@ const EmployeeDashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/dashboards/employee/stats');
+        const res = await axios.get('https://suryabusandrailwaybooking.onrender.com/api/dashboards/employee/stats');
         setStats(res.data);
       } catch (err) {
         console.error(err);
