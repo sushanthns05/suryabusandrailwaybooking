@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-700: #1D4170;
+  --color-navy-800: #143054;
+  --color-navy-900: #0B1F3A;
+  --color-gold-400: #F5C22A;
+  --color-gold-500: #F4B400;
+  --color-gold-600: #D49D00;
+  --color-lightGray: #F5F7FA;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Poppins", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-lightGray text-navy-900 font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl;
+  }
+  .btn-primary {
+    @apply bg-gold-500 hover:bg-gold-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 shadow-md;
+  }
+  .btn-secondary {
+    @apply bg-navy-800 hover:bg-navy-900 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all;
+  }
+}
